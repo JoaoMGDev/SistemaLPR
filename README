@@ -1,10 +1,4 @@
-# 🚗 VisionPlate
-
-### Sistema de Leitura de Placas (LPR) com Visão Computacional (Sem IA)
-
-![Resultado do sistema](exemplo_teste.png)
-
----
+# 🚗 Sistema de Leitura de Placas (LPR) com Visão Computacional
 
 ## 📌 Sobre o Projeto
 
@@ -71,7 +65,7 @@ O projeto foi desenvolvido **sem uso de redes neurais ou machine learning**, uti
 
 - Biblioteca: **Tesseract OCR**
 - Configuração:
-  - `--psm 7`
+  - `--psm 7` (linha única de texto)
   - Whitelist de caracteres (A-Z, 0-9)
 - Pós-processamento com regex para limpeza
 
@@ -79,25 +73,25 @@ O projeto foi desenvolvido **sem uso de redes neurais ou machine learning**, uti
 
 ### 🎨 Detecção de Cor do Veículo
 
-- Conversão para HSV
-- Segmentação por cor
-- Contagem de pixels
+- Conversão para espaço de cor HSV
+- Segmentação por faixas de cor
+- Contagem de pixels por máscara
 - Identificação da cor predominante
 
 ---
 
 ### 🗄️ Consulta de Dados
 
-- Banco fictício em JSON contendo:
+- Banco de dados fictício em JSON contendo:
   - Placa
-  - Cor
-  - Status
+  - Cor registrada
+  - Status de roubo
 
 O sistema verifica:
 
-- 🚨 Veículo roubado  
-- ⚠️ Cor divergente  
-- ✅ Em ordem  
+- 🚨 Se o veículo é roubado  
+- ⚠️ Se há divergência de cor  
+- ✅ Se está em ordem  
 
 ---
 
@@ -114,12 +108,82 @@ O sistema verifica:
 
 ## 📂 Estrutura do Projeto
 
-```bash
-SistemaLPR/
-├── cascade.xml
-├── sistema_lpr.py
-├── exemplo_teste.png
+📁 SistemaLPR/
+│
+├── cascade.xml # Classificador treinado
+├── sistema_lpr.py # Código principal
 ├── images/
-│   ├── carro_teste.jpg
-│   ├── carro_teste2.jpg
-│   └── carro_teste3.jpg
+│ ├── carro_teste.jpg
+│ ├── carro_teste2.jpg
+│ └── carro_teste3.jpg
+
+---
+
+## ⚙️ Instalação e Execução
+
+### 2️⃣ Instalar o Tesseract
+
+    Baixe e instale:  
+    👉 https://github.com/tesseract-ocr/tesseract
+
+    Depois configure o caminho no código:
+
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
+
+### 3️⃣ Executar o projeto
+
+    python sistema_lpr.py
+
+### 4️⃣ Testar com outras imagens
+
+    Altere a linha no código:
+
+    img_bruta = cv2.imread('images/carro_teste.jpg')
+ 
+---
+
+📸 Resultados
+
+O sistema exibe:
+
+📦 Bounding box na placa
+🔤 Texto reconhecido
+🎨 Cor do veículo
+⚠️ Status
+
+---
+
+### Além disso, mostra etapas intermediárias:
+
+    * ROI da placa
+    * Imagem tratada
+    * Placa alinhada
+
+---
+
+## 🎥 Demonstração
+
+Imagens de teste
+
+![alt text](exemplo_teste.png)
+
+Vídeo demonstrando o funcionamento
+
+---
+
+## 📚 Considerações Finais
+
+Este projeto demonstra que é possível construir soluções funcionais de visão computacional utilizando apenas técnicas clássicas, sem dependência de Inteligência Artificial.
+
+Apesar de simples, o sistema resolve um problema real e pode ser expandido com:
+
+Integração com banco de dados real
+Uso de câmera em tempo real
+Melhorias no OCR
+Interface gráfica
+
+---
+
+## 👨‍💻 Autor
+
+João Marcos Pereira Gouveia - 24877
