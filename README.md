@@ -106,19 +106,6 @@ O sistema verifica:
 
 ---
 
-## 📂 Estrutura do Projeto
-
-📁 SistemaLPR/
-│
-├── cascade.xml # Classificador treinado
-├── sistema_lpr.py # Código principal
-├── images/
-│ ├── carro_teste.jpg
-│ ├── carro_teste2.jpg
-│ └── carro_teste3.jpg
-
----
-
 ## ⚙️ Instalação e Execução
 
 ### 2️⃣ Instalar o Tesseract
@@ -160,6 +147,16 @@ O sistema exibe:
     * Placa alinhada
 
 ---
+
+### 📷 Imagem e Video demonstrativo
+
+## Exemplo de leitura da placa
+
+<img width="973" height="486" alt="exemplo_teste" src="https://github.com/user-attachments/assets/26e0450d-2727-4545-9296-0a5ae5b78737" />
+
+## Video demonstrativo
+
+https://github.com/user-attachments/assets/767c75c7-4e65-4dc7-aa07-c419b0d3a150
 
 ## 📚 Considerações Finais
 
