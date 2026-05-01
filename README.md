@@ -161,16 +161,6 @@ O sistema exibe:
 
 ---
 
-## 🎥 Demonstração
-
-Imagens de teste
-
-![alt text](exemplo_teste.png)
-
-Vídeo demonstrando o funcionamento
-
----
-
 ## 📚 Considerações Finais
 
 Este projeto demonstra que é possível construir soluções funcionais de visão computacional utilizando apenas técnicas clássicas, sem dependência de Inteligência Artificial.
