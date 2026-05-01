@@ -123,22 +123,22 @@ O sistema verifica:
 
 ### 2️⃣ Instalar o Tesseract
 
-    Baixe e instale:  
-    👉 https://github.com/tesseract-ocr/tesseract
+Baixe e instale:  
+👉 https://github.com/tesseract-ocr/tesseract
 
-    Depois configure o caminho no código:
+Depois configure o caminho no código:
 
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
 
 ### 3️⃣ Executar o projeto
 
-    python sistema_lpr.py
+python sistema_lpr.py
 
 ### 4️⃣ Testar com outras imagens
 
-    Altere a linha no código:
+Altere a linha no código:
 
-    img_bruta = cv2.imread('images/carro_teste.jpg')
+img_bruta = cv2.imread('images/carro_teste.jpg')
  
 ---
 
@@ -155,19 +155,9 @@ O sistema exibe:
 
 ### Além disso, mostra etapas intermediárias:
 
-    * ROI da placa
-    * Imagem tratada
-    * Placa alinhada
-
----
-
-## 🎥 Demonstração
-
-Imagens de teste
-
-![alt text](exemplo_teste.png)
-
-Vídeo demonstrando o funcionamento
+- ROI da placa
+- Imagem tratada
+- Placa alinhada
 
 ---
 
