@@ -109,7 +109,7 @@ def detectar_cor_veiculo(img_original, x, y, largura_placa, altura_placa):
 
 classificador = cv2.CascadeClassifier('cascade.xml') 
 
-img_bruta = cv2.imread('images\carro_teste2.jpg') 
+img_bruta = cv2.imread('images\carro_teste3.jpg') 
 img = cv2.resize(img_bruta, (680, 453))
 img_cinza = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
 
